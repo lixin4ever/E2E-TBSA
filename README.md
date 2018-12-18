@@ -8,10 +8,13 @@ Source code of our AAAI paper on End-to-End Target/Aspect-Based Sentiment Analys
 * numpy 1.13.3
 
 ## Data
-* **rest_total** consist of the reviews from the SemEval-2014, SemEval-2015, SemEval-2016 restaurant datasets
-* **laptop14** is identical to the SemEval-2014 laptop dataset
+* **rest_total** consist of the reviews from the SemEval-2014, SemEval-2015, SemEval-2016 restaurant datasets.
+* **laptop14** is identical to the SemEval-2014 laptop dataset.
 * **twitter** is built by [Mitchell et al.](https://www.aclweb.org/anthology/D13-1171) (EMNLP 2013). 
 * We also provide the data in the format of conll03 NER dataset.
+
+## Parameter Settings
+* To reproduce the results, please refer to the settings in **config.py**.
 
 ## Citation
 If the code is used in your research, please star this repo and cite our paper as follows:
