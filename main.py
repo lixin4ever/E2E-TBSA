@@ -226,14 +226,14 @@ if __name__ == '__main__':
     embeddings = load_embeddings(path=emb_path, vocab=vocab, ds_name=ds_name, emb_name=emb_name)
 
     # obtain the pre-trained character embeddings
-    char_embeddings = load_char_embeddings(char_vocab=char_vocab, ds_name=ds_name)
+    char_embeddings = None
 
     # convert the datasets to the conll format and write them back to the specified folder
     #to_conll(train=train, val=val, test=test, ds_name=ds_name, embeddings=embeddings, vocab=vocab)
 
     args.dim_w = len(embeddings[0])
-    args.dim_char = len(char_embeddings[0])
-
+    #args.dim_char = len(char_embeddings[0])
+    args.dim_char = 10
     args.ote_tag_vocab = ote_tag_vocab
     args.ts_tag_vocab = ts_tag_vocab
 
