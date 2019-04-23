@@ -16,6 +16,10 @@ Source code of our AAAI paper on End-to-End Target/Aspect-Based Sentiment Analys
 ## Parameter Settings
 * To reproduce the results, please refer to the settings in **config.py**.
 
+## Environment
+* OS: REHL Server 6.4 (Santiago)
+* CPU: Intel Xeon CPU E5-2620 (Yes, we do not use GPU to gurantee the deterministic outputs)
+
 ## Citation
 If the code is used in your research, please star this repo and cite our paper as follows:
 ```
