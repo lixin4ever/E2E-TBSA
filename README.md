@@ -23,11 +23,12 @@ Source code of our AAAI paper on End-to-End Target/Aspect-Based Sentiment Analys
 ## Citation
 If the code is used in your research, please star this repo and cite our paper as follows:
 ```
-@article{li2018unified,
-  title={A Unified Model for Opinion Target Extraction and Target Sentiment Prediction},
+@inproceedings{li2019unified,
+  title={A unified model for opinion target extraction and target sentiment prediction},
   author={Li, Xin and Bing, Lidong and Li, Piji and Lam, Wai},
-  journal={arXiv preprint arXiv:1811.05082},
-  year={2018}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  pages={6714--6721},
+  year={2019}
 }
 ```
 
