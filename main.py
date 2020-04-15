@@ -176,7 +176,7 @@ if __name__ == '__main__':
     parser.add_argument("-dropout", type=float, default=0.5, help="dropout rate for final representations")
     parser.add_argument("-emb_name", type=str, default="glove_840B", help="name of word embedding")
     # Note: tagging schema is OT in the original data record
-    parser.add_argument("-tagging_schema", type=str, default="BIO", help="tagging schema")
+    parser.add_argument("-tagging_schema", type=str, default="BIEOS", help="tagging schema")
     parser.add_argument("-rnn_type", type=str, default="LSTM",
                         help="type of rnn unit, currently only LSTM and GRU are supported")
     parser.add_argument("-sgd_lr", type=float, default=0.1,
