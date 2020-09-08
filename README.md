@@ -10,7 +10,7 @@ Source code of our AAAI paper on End-to-End Target/Aspect-Based Sentiment Analys
 ## Data
 * ~~**rest_total** consist of the reviews from the SemEval-2014, SemEval-2015, SemEval-2016 restaurant datasets.~~
 * (**Important**) **rest14**, **rest15**, **rest16**: restaurant reviews from SemEval 2014 (task 4), SemEval 2015 (task 12) and SemEval 2016 (task 5) respectively. We have prepared data files with train/dev/test split in our another [project](https://github.com/lixin4ever/BERT-E2E-ABSA/tree/master/data), check it out if needed.
-* (**Important**) Please **DO NOT** use the ```rest_total``` dataset built by ourselves again, more details can be found in **Updated Results**. 
+* (**Important**) **DO NOT** use the ```rest_total``` dataset built by ourselves again, more details can be found in [Updated Results](https://github.com/lixin4ever/E2E-TBSA/blob/master/README.md#updated-results-important). 
 * **laptop14** is identical to the SemEval-2014 laptop dataset.
 * **twitter** is built by [Mitchell et al.](https://www.aclweb.org/anthology/D13-1171) (EMNLP 2013). 
 * We also provide the data in the format of conll03 NER dataset.
