@@ -75,7 +75,7 @@ def evaluate_ts(gold_ts, pred_ts):
 
     ts_micro_p = float(n_tp_total) / (n_p_total + SMALL_POSITIVE_CONST)
     ts_micro_r = float(n_tp_total) / (n_g_total + SMALL_POSITIVE_CONST)
-    ts_micro_f1 = 2 * ts_micro_p * ts_micro_r / (ts_micro_p + ts_micro_r)
+    ts_micro_f1 = 2 * ts_micro_p * ts_micro_r / (ts_micro_p + ts_micro_r + SMALL_POSITIVE_CONST)
     ts_scores = (ts_macro_f1, ts_micro_p, ts_micro_r, ts_micro_f1)
     return ts_scores
 
