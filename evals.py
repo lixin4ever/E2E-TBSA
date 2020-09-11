@@ -1,6 +1,7 @@
 from utils import *
 import numpy as np
 
+SMALL_POSITIVE_CONST = 1e-4
 
 def evaluate_ote(gold_ot, pred_ot):
     """
@@ -24,9 +25,9 @@ def evaluate_ote(gold_ot, pred_ot):
         n_pred_ot += len(p_ot_sequence)
     # add 0.001 for smoothing
     # calculate precision, recall and f1 for ote task
-    ot_precision = float(n_tp_ot) / float(n_pred_ot + 0.001)
-    ot_recall = float(n_tp_ot) / float(n_gold_ot + 0.001)
-    ot_f1 = 2 * ot_precision * ot_recall / (ot_precision + ot_recall + 0.001)
+    ot_precision = float(n_tp_ot) / float(n_pred_ot + SMALL_POSITIVE_CONST)
+    ot_recall = float(n_tp_ot) / float(n_gold_ot + SMALL_POSITIVE_CONST)
+    ot_f1 = 2 * ot_precision * ot_recall / (ot_precision + ot_recall + SMALL_POSITIVE_CONST)
     ote_scores = (ot_precision, ot_recall, ot_f1)
     return ote_scores
 
@@ -59,9 +60,9 @@ def evaluate_ts(gold_ts, pred_ts):
         n_ts = n_tp_ts[i]
         n_g_ts = n_gold_ts[i]
         n_p_ts = n_pred_ts[i]
-        ts_precision[i] = float(n_ts) / float(n_p_ts + 0.001)
-        ts_recall[i] = float(n_ts) / float(n_g_ts + 0.001)
-        ts_f1[i] = 2 * ts_precision[i] * ts_recall[i] / (ts_precision[i] + ts_recall[i] + 0.001)
+        ts_precision[i] = float(n_ts) / float(n_p_ts + SMALL_POSITIVE_CONST)
+        ts_recall[i] = float(n_ts) / float(n_g_ts + SMALL_POSITIVE_CONST)
+        ts_f1[i] = 2 * ts_precision[i] * ts_recall[i] / (ts_precision[i] + ts_recall[i] + SMALL_POSITIVE_CONST)
 
     ts_macro_f1 = ts_f1.mean()
 
@@ -72,8 +73,8 @@ def evaluate_ts(gold_ts, pred_ts):
     # total sum of TP and FP
     n_p_total = sum(n_pred_ts)
 
-    ts_micro_p = float(n_tp_total) / (n_p_total + 0.001)
-    ts_micro_r = float(n_tp_total) / (n_g_total + 0.001)
+    ts_micro_p = float(n_tp_total) / (n_p_total + SMALL_POSITIVE_CONST)
+    ts_micro_r = float(n_tp_total) / (n_g_total + SMALL_POSITIVE_CONST)
     ts_micro_f1 = 2 * ts_micro_p * ts_micro_r / (ts_micro_p + ts_micro_r)
     ts_scores = (ts_macro_f1, ts_micro_p, ts_micro_r, ts_micro_f1)
     return ts_scores
