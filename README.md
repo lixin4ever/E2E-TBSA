@@ -36,7 +36,7 @@ Source code of our AAAI paper on End-to-End Target/Aspect-Based Sentiment Analys
     | BERT-SAN (OURS) | 73.68 | 59.90 | 70.51 |
     | BERT-TFM (OURS) | 73.98 | 60.24 | 70.25 |
     | BERT-CRF (OURS) | 73.17 | 60.70 | 70.37 |
-    | [(Chen and Qian, 2019)](https://www.aclweb.org/anthology/2020.acl-main.340.pdf)| 75.42 | 66.05 | - |
+    | [(Chen and Qian, 2020)](https://www.aclweb.org/anthology/2020.acl-main.340.pdf)| 75.42 | 66.05 | - |
     | [(Liang et al., 2020)](https://arxiv.org/pdf/2004.01951.pdf)| 72.60 | 62.37 | - |
 
 
